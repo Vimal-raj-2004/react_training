@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Reset the dark Vite template styles: white page, normal layout */
+body {
+  background: #ffffff;
+  color: #222222;
+  color-scheme: light;
+  margin: 0;
+  display: block;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+
+/* Self introduction card */
+.intro {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: #ffffff;
+  color: #222222;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", "Times New Roman", serif;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #111111;
+}
+
+.intro h3 {
+  margin: 4px 0 20px;
+  font-weight: 500;
+  color: #555555;
+}
+
+.intro h2 {
+  margin: 20px 0 6px;
+  padding-bottom: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a56db;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.intro p {
+  margin: 0;
+}
+
+.intro ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.intro li {
+  margin-bottom: 2px;
+}
