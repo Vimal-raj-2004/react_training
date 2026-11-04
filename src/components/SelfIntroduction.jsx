@@ -20,7 +20,8 @@ function SelfIntroduction() {
       <p>Fresher. Completed training projects in JavaScript and API fetching.</p>
 
       <h2>Hobbies / Interests</h2>
-      <p>I’m a big fan of Formula 1, and I never miss a race. I also enjoy playing video games, especially FIFA. Keeping up with latest tech news and AI trends is a regular thing for me.</p>
+      <p>  I enjoy learning new technologies, exploring AI tools, coding,
+  listening to music, and playing games in my free time.  </p>
 
       <h2>Career Goal</h2>
       <p>My goal is to become a strong Full Stack Developer. I want to work on challenging projects, continuously learn new technologies, and grow into a reliable developer who can contribute to building modern, scalable web applications.</p>
