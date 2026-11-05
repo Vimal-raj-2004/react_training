@@ -1,0 +1,16 @@
+import "./UserCard.css";
+
+// Child component: receives data from the parent through props
+function UserCard(props) {
+  return (
+    <div className="user-card">
+      <h2>{props.name}</h2>
+      <p>City: {props.city}</p>
+      <p>Age: {props.age}</p>
+      <p>Email: {props.email}</p>
+      <p>Phone: {props.phone}</p>
+    </div>
+  );
+}
+
+export default UserCard;

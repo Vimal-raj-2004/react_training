@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  background: #ffffff;
+  color: #222222;
+  color-scheme: light;
+  margin: 0;
+  display: block;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+
+.user-list {
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: "Poppins", "Times New Roman", serif;
+}
+
+.user-card {
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.5;
+}
+
+.user-card h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #1a56db;
+}
+
+.user-card p {
+  margin: 0;
+}
+.user-list h1 {
+  margin: 0 0 20px;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: #111111;
+}
