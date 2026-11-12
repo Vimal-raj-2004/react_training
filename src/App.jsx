@@ -1,28 +1,57 @@
 import { useState } from "react";
-import Login from "./components/Login";
-import Home from "./components/Home";
 import "./App.css";
 
 function App() {
-  // Boolean state: false = logged out, true = logged in
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // State 1: counter value
+  const [count, setCount] = useState(0);
 
-  function handleLogin() {
-    setIsLoggedIn(true);
+  // State 2: theme ("light" or "dark")
+  const [theme, setTheme] = useState("light");
+
+  function handleIncrement() {
+    setCount(count + 1);
   }
 
-  function handleLogout() {
-    setIsLoggedIn(false);
+  function handleDecrement() {
+    setCount(count - 1);
+  }
+
+  function handleReset() {
+    setCount(0);
+  }
+
+  function handleThemeToggle() {
+    setTheme(theme === "light" ? "dark" : "light");
   }
 
   return (
-    <div className="app">
-      {/* Ternary operator: show Home if logged in, otherwise Login */}
-      {isLoggedIn ? (
-        <Home onLogout={handleLogout} />
-      ) : (
-        <Login onLogin={handleLogin} />
-      )}
+    // Dynamic class: "app light" or "app dark"
+    <div className={"app " + theme}>
+      <div className="counter-box">
+        <div className="top-row">
+          <p className="mode-text">
+            Current Mode: {theme === "light" ? "Light Mode" : "Dark Mode"}
+          </p>
+          <button className="btn btn-theme" onClick={handleThemeToggle}>
+            {theme === "light" ? "Switch to Dark" : "Switch to Light"}
+          </button>
+        </div>
+
+        <h1>Counter App</h1>
+        <p className="count-value">{count}</p>
+
+        <div className="button-row">
+          <button className="btn btn-decrement" onClick={handleDecrement}>
+            Decrement
+          </button>
+          <button className="btn btn-reset" onClick={handleReset}>
+            Reset
+          </button>
+          <button className="btn btn-increment" onClick={handleIncrement}>
+            Increment
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

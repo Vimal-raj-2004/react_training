@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* Reset the dark Vite template styles */
+body {
+  background: #f4f6fb;
+  color: #222222;
+  color-scheme: light;
+  margin: 0;
+  display: block;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: "Poppins", "Times New Roman", serif;
+}
+
+h1 {
+  color: #111111;
+  margin: 0;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-login {
+  background: #1a56db;
+}
+
+.btn-login:hover {
+  background: #1543ad;
+}
+
+.btn-logout {
+  background: #dc2626;
+}
+
+.btn-logout:hover {
+  background: #b91c1c;
+}
+
+/* Login page */
+.login-box {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-box p {
+  margin: 12px 0 24px;
+  color: #555555;
+}
+
+/* Home page */
+.home {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Responsive card grid: 1 column on mobile, more on wider screens */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  position: relative;
+  padding: 20px 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.5;
+}
+
+.user-card h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #1a56db;
+}
+
+.user-card p {
+  margin: 0;
+  color: #333333;
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 2px 10px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.login-box h1 {
+  margin-bottom: 16px;
+}
+
+.login-box p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}

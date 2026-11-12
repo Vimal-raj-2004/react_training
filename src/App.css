@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /* Reset the dark Vite template styles */
 body {
-  background: #f4f6fb;
-  color: #222222;
-  color-scheme: light;
   margin: 0;
   display: block;
 }
@@ -20,120 +17,148 @@ body {
 
 .app {
   min-height: 100vh;
-  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   box-sizing: border-box;
   font-family: "Poppins", "Times New Roman", serif;
+  transition: background 0.3s, color 0.3s;
 }
 
-h1 {
-  color: #111111;
-  margin: 0;
+/* ---------- Light theme: all text black ---------- */
+.app.light {
+  background: #f4f6fb;
+  color: #000000;
 }
 
-/* Buttons */
-.btn {
-  padding: 10px 24px;
-  border: none;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.btn-login {
-  background: #1a56db;
-}
-
-.btn-login:hover {
-  background: #1543ad;
-}
-
-.btn-logout {
-  background: #dc2626;
-}
-
-.btn-logout:hover {
-  background: #b91c1c;
-}
-
-/* Login page */
-.login-box {
-  max-width: 400px;
-  margin: 100px auto;
-  padding: 40px 30px;
+.app.light .counter-box {
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.app.light h1,
+.app.light .count-value,
+.app.light .mode-text {
+  color: #000000;
+}
+
+.app.light .btn-theme {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* ---------- Dark theme: light text on dark background ---------- */
+.app.dark {
+  background: #121826;
+  color: #f1f5f9;
+}
+
+.app.dark .counter-box {
+  background: #1f2937;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.app.dark h1,
+.app.dark .count-value,
+.app.dark .mode-text {
+  color: #f1f5f9;
+}
+
+.app.dark .btn-theme {
+  background: #f1f5f9;
+  color: #111111;
+}
+
+/* ---------- Layout ---------- */
+.counter-box {
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 14px;
   text-align: center;
+  transition: background 0.3s;
 }
 
-.login-box p {
-  margin: 12px 0 24px;
-  color: #555555;
-}
-
-/* Home page */
-.home {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.home-header {
+.top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 10px;
 }
 
-/* Responsive card grid: 1 column on mobile, more on wider screens */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.user-card {
-  position: relative;
-  padding: 20px 24px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  line-height: 1.5;
-}
-
-.user-card h2 {
-  margin: 0 0 8px;
-  font-size: 20px;
-  color: #1a56db;
-}
-
-.user-card p {
+.mode-text {
   margin: 0;
-  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  padding: 2px 10px;
-  background: #fef3c7;
-  color: #92400e;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-}
-.login-box h1 {
-  margin-bottom: 16px;
+h1 {
+  margin: 24px 0 8px;
+  font-size: 28px;
 }
 
-.login-box p {
-  margin-top: 0;
-  margin-bottom: 24px;
-  line-height: 1.6;
+.count-value {
+  margin: 0 0 24px;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-increment {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.btn-decrement {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.btn-reset {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  .counter-box {
+    padding: 20px;
+  }
+
+  .count-value {
+    font-size: 60px;
+  }
+
+  .btn {
+    flex: 1 1 100%;
+  }
 }
